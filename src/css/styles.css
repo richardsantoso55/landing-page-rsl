@@ -150,6 +150,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
     height: 28px;
     width: auto;
     display: block;
+    object-fit: contain;
 }
 .nav-divider {
     display: block;
@@ -878,6 +879,10 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
     .nav-cta { margin-left: 0; margin-top: 8px; width: 100%; text-align: center; }
     .nav-toggle { display: flex; z-index: 1000; }
     .nav-toggle.active { position: fixed; right: 24px; }
+    .nav-crowe-logo { height: 22px; }
+    .nav-logo { gap: 12px; }
+    .logo-text { font-size: 0.8rem; letter-spacing: 0.5px; }
+    .logo-badge { font-size: 0.55rem; }
 
     /* Hero */
     .hero-container {
