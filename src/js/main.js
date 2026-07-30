@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ─── 6. CONTACT FORM ───
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
             const btn = contactForm.querySelector('button[type="submit"]');
@@ -148,35 +148,44 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
             btn.disabled = true;
 
-            // Get form data
-            const formData = new FormData(contactForm);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const subject = formData.get('subject');
-            const message = formData.get('message');
+            // Send via FormSubmit
+            try {
+                const formData = new FormData(contactForm);
+                const resp = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
 
-            // Build mailto fallback
-            const mailtoLink = `mailto:[your.email@example.com]?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-                `From: ${name}\nEmail: ${email}\n\n${message}`
-            )}`;
-
-            // Simulate send (replace with actual form service later)
-            setTimeout(() => {
-                btn.innerHTML = '<i class="fa-regular fa-circle-check"></i> Message Sent!';
-                btn.style.background = '#10B981';
-                btn.style.borderColor = '#10B981';
-
-                // Open mailto as fallback
-                window.location.href = mailtoLink;
-
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.style.background = '';
-                    btn.style.borderColor = '';
-                    btn.disabled = false;
+                if (resp.ok) {
+                    btn.innerHTML = '<i class="fa-regular fa-circle-check"></i> Message Sent!';
+                    btn.style.background = '#10B981';
+                    btn.style.borderColor = '#10B981';
                     contactForm.reset();
-                }, 3000);
-            }, 1200);
+                } else {
+                    throw new Error('Send failed');
+                }
+            } catch (err) {
+                btn.innerHTML = '<i class="fa-regular fa-circle-xmark"></i> Failed — try email directly';
+                btn.style.background = '#dc2626';
+                btn.style.borderColor = '#dc2626';
+                // Fallback: mailto
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const subject = formData.get('subject');
+                const message = formData.get('message');
+                const mailto = `mailto:richard.liman@crowe.id?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+                    `From: ${name}\nEmail: ${email}\n\n${message}`
+                )}`;
+                window.open(mailto, '_blank');
+            }
+
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '';
+                btn.style.borderColor = '';
+                btn.disabled = false;
+            }, 4000);
         });
     }
 
