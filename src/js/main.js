@@ -138,54 +138,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ─── 6. CONTACT FORM ───
     if (contactForm) {
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
+        contactForm.addEventListener('submit', (e) => {
             const btn = contactForm.querySelector('button[type="submit"]');
-            const originalText = btn.innerHTML;
-
-            // Show loading state
             btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
             btn.disabled = true;
-
-            // Send via FormSubmit
-            try {
-                const formData = new FormData(contactForm);
-                const resp = await fetch(contactForm.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: { 'Accept': 'application/json' }
-                });
-
-                if (resp.ok) {
-                    btn.innerHTML = '<i class="fa-regular fa-circle-check"></i> Message Sent!';
-                    btn.style.background = '#10B981';
-                    btn.style.borderColor = '#10B981';
-                    contactForm.reset();
-                } else {
-                    throw new Error('Send failed');
-                }
-            } catch (err) {
-                btn.innerHTML = '<i class="fa-regular fa-circle-xmark"></i> Failed — try email directly';
-                btn.style.background = '#dc2626';
-                btn.style.borderColor = '#dc2626';
-                // Fallback: mailto
-                const name = formData.get('name');
-                const email = formData.get('email');
-                const subject = formData.get('subject');
-                const message = formData.get('message');
-                const mailto = `mailto:richard.liman@crowe.id?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-                    `From: ${name}\nEmail: ${email}\n\n${message}`
-                )}`;
-                window.open(mailto, '_blank');
-            }
-
-            setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.style.background = '';
-                btn.style.borderColor = '';
-                btn.disabled = false;
-            }, 4000);
+            // Let the form submit natively to FormSubmit
+            // (action & method already set in HTML)
+            return true;
         });
     }
 
