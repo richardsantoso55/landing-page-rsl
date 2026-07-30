@@ -41,7 +41,7 @@ Richard Santoso Liman, CPA
 Certified Public Accountant of Indonesia specializing in audit & assurance, regulatory compliance, corporate risk governance and financial transformation.
 
 **Primary CTA:** Let's Talk → `#contact`
-**Secondary CTA:** LinkedIn → `https://www.linkedin.com/in/your-profile/`
+**Secondary CTA:** LinkedIn → `https://www.linkedin.com/in/richard-santoso-liman/`
 
 **Portrait:** `assets/images/portrait.jpg`
 
@@ -103,7 +103,7 @@ Certified Public Accountant of Indonesia specializing in audit & assurance, regu
 ### 6. Contact Section
 
 **Email:** richard.liman@crowe.id
-**LinkedIn:** https://www.linkedin.com/in/your-profile/
+**LinkedIn:** https://www.linkedin.com/in/richard-santoso-liman/
 **WhatsApp:** +62 877-8215-5444 (wa.me/6287782155444)
 **Location:** [placeholder]
 
