@@ -2,7 +2,7 @@
 
 A personal professional landing page for Richard Santoso Liman, CPA — Audit and Assurance Manager at Crowe Indonesia. Designed for CFOs and auditees seeking assurance that builds stakeholder confidence.
 
-**Live preview:** `https://richardsantoso55.github.io/landing-page-rsl/`
+**Live preview:** `https://richardsantoso55.github.io/ynaqvat-cntr/`
 
 ---
 
