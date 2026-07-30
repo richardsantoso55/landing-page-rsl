@@ -1,8 +1,8 @@
-# Richard Santoso Liman, S.E., Ak., CPA — Professional Landing Page
+# YOUR NAME — Professional Landing Page
 
 A personal professional landing page for Richard Santoso Liman, CPA — Audit and Assurance Manager at Crowe Indonesia. Designed for CFOs and auditees seeking assurance that builds stakeholder confidence.
 
-**Live preview:** `http://20.196.89.66:10/richard/`
+**Live preview:** `http://YOURLINK`
 
 ---
 
