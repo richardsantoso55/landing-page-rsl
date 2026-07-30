@@ -96,9 +96,9 @@ Sections removed: Services, Experience, Testimonials, Insights.
 
 ## Contact
 
-- **Email:** richard.liman@crowe.id
+- **Email:** your.email@example.com
 - **LinkedIn:** https://www.linkedin.com/in/richard-santoso-liman/
-- **WhatsApp:** +62 877-8215-5444
+- **WhatsApp:** +62 812-XXXX-XXXX
 
 ---
 

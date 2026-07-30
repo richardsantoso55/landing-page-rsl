@@ -102,9 +102,9 @@ Certified Public Accountant of Indonesia specializing in audit & assurance, regu
 
 ### 6. Contact Section
 
-**Email:** richard.liman@crowe.id
+**Email:** your.email@example.com
 **LinkedIn:** https://www.linkedin.com/in/richard-santoso-liman/
-**WhatsApp:** +62 877-8215-5444 (wa.me/6287782155444)
+**WhatsApp:** +62 812-XXXX-XXXX (wa.me/62812XXXXXXX)
 **Location:** [placeholder]
 
 **Form Fields:** Name, Email, Subject, Message
