@@ -96,10 +96,10 @@ Sections removed: Services, Experience, Testimonials, Insights.
 
 ## Contact
 
-- **Email:** richard.liman@crowe.id
+- **Email:** YOUR EMAIL
 - **LinkedIn:** https://www.linkedin.com/in/your-profile/
-- **WhatsApp:** +62 877-8215-5444
+- **WhatsApp:** YOUR PHONE NUMBER
 
 ---
 
-*Built for Richard Santoso Liman, S.E., Ak., CPA — Audit and Assurance Manager at Crowe Indonesia*
+*Built for YOUR NAME — YOUR TITLE at YOUR COMPANY*
